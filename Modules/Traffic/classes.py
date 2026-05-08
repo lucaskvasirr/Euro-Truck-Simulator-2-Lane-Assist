@@ -74,6 +74,13 @@ class Position:
     def is_zero(self):
         return self.x == 0 and self.y == 0 and self.z == 0
 
+    def is_same(self, other, tolerance=0.5):
+        return (
+            abs(self.x - other.x) < tolerance
+            and abs(self.y - other.y) < tolerance
+            and abs(self.z - other.z) < tolerance
+        )
+
     def __str__(self):
         return f"Position({self.x:.2f}, {self.y:.2f}, {self.z:.2f})"
 
@@ -350,54 +357,42 @@ class Vehicle:
         3. Back right
         4. Back left
         """
-        ground_middle = [self.position.x, self.position.y, self.position.z]
-        if offset:
-            ground_middle[0] += offset.x
-            ground_middle[1] += offset.y
-            ground_middle[2] += offset.z
+        middle = [self.position.x, self.position.y, self.position.z]
 
         # Back left
         back_left = [
-            ground_middle[0] - self.size.width / 2,
-            ground_middle[1],
-            ground_middle[2] + (self.size.length / 2 * correction_multiplier)
-            if self.is_tmp
-            else ground_middle[2] + (self.size.length * 0.82 * correction_multiplier),
+            middle[0] - self.size.width / 2,
+            middle[1] - self.size.height / 2,
+            middle[2] - self.size.length / 2
         ]
 
         # Back right
         back_right = [
-            ground_middle[0] + self.size.width / 2,
-            ground_middle[1],
-            ground_middle[2] + (self.size.length / 2 * correction_multiplier)
-            if self.is_tmp
-            else ground_middle[2] + (self.size.length * 0.82 * correction_multiplier),
+            middle[0] + self.size.width / 2,
+            middle[1] - self.size.height / 2,
+            middle[2] - self.size.length / 2
         ]
 
         # Front right
         front_right = [
-            ground_middle[0] + self.size.width / 2,
-            ground_middle[1],
-            ground_middle[2] - (self.size.length / 2 * correction_multiplier)
-            if self.is_tmp
-            else ground_middle[2] - (self.size.length * 0.18 * correction_multiplier),
+            middle[0] + self.size.width / 2,
+            middle[1] - self.size.height / 2,
+            middle[2] + self.size.length / 2
         ]
 
         # Front left
         front_left = [
-            ground_middle[0] - self.size.width / 2,
-            ground_middle[1],
-            ground_middle[2] - (self.size.length / 2 * correction_multiplier)
-            if self.is_tmp
-            else ground_middle[2] - (self.size.length * 0.18 * correction_multiplier),
+            middle[0] - self.size.width / 2,
+            middle[1] - self.size.height / 2,
+            middle[2] + self.size.length / 2
         ]
 
         # Rotate the corners
         pitch, yaw, roll = self.rotation.euler()
-        front_left = rotate_around_point(front_left, ground_middle, pitch, -yaw, 0)
-        front_right = rotate_around_point(front_right, ground_middle, pitch, -yaw, 0)
-        back_right = rotate_around_point(back_right, ground_middle, pitch, -yaw, 0)
-        back_left = rotate_around_point(back_left, ground_middle, pitch, -yaw, 0)
+        front_left = rotate_around_point(front_left, middle, pitch, -yaw, 0)
+        front_right = rotate_around_point(front_right, middle, pitch, -yaw, 0)
+        back_right = rotate_around_point(back_right, middle, pitch, -yaw, 0)
+        back_left = rotate_around_point(back_left, middle, pitch, -yaw, 0)
 
         front_left = Position(*front_left)
         front_right = Position(*front_right)
@@ -405,13 +400,6 @@ class Vehicle:
         back_left = Position(*back_left)
 
         return front_left, front_right, back_right, back_left
-
-    def get_corrected_position(self) -> Position | None:
-        front_left, front_right, back_right, back_left = self.get_corners()
-        center_x = (front_left.x + front_right.x + back_right.x + back_left.x) / 4
-        center_y = (front_left.y + front_right.y + back_right.y + back_left.y) / 4
-        center_z = (front_left.z + front_right.z + back_right.z + back_left.z) / 4
-        return Position(center_x, center_y, center_z)
 
     def get_position_in(self, seconds: float) -> Position | None:
         distance = self.speed * seconds

@@ -12,6 +12,9 @@ class Module(ETS2LAModule):
     # Vehicle + 3 Trailers
     vehicle_object_format = vehicle_format + trailer_format + trailer_format + trailer_format
     total_format = "=" + vehicle_object_format * 40
+    
+    parked_vehicle_format = "ffffffffffhb"
+    total_parked_format = "=" + parked_vehicle_format * 40
 
     last_vehicles: dict[int, Vehicle] = {}
 
@@ -24,10 +27,13 @@ class Module(ETS2LAModule):
 
     def wait_for_buffer(self):
         self.buf = None
+        self.pbuf = None
         while self.buf is None:
             try:
                 size = 6960  # 40 vehicles * 174 bytes each
                 self.buf = mmap.mmap(0, size, r"Local\ETS2LATraffic")
+                size = 1720
+                self.pbuf = mmap.mmap(0, size, r"Local\ETS2LAParkedVehicles")
             except Exception:
                 if time.time() - self.start_time > 5 and not self.message_shown:
                     logging.warning(
@@ -165,6 +171,51 @@ class Module(ETS2LAModule):
                         vehicle.update_from_last(self.last_vehicles[vehicle.id])
 
             self.last_vehicles = {vehicle.id: vehicle for vehicle in vehicles}
+            
+            # Parked vehicles after all the processing is done for normal ones
+            if self.pbuf is not None:
+                try:
+                    data = struct.unpack(self.total_parked_format, self.pbuf[:1720])
+                    parked_vehicles: list[Vehicle] = []
+                    ids: set[int] = set()
+                    for _i in range(0, 40):
+                        position = Position(data[0], data[1], data[2])
+                        rotation = Quaternion(data[3], data[4], data[5], data[6])
+                        size = Size(data[7], data[8], data[9])
+                        id = data[10]
+                        is_trailer = data[11]
+
+                        if position.is_zero() or rotation.is_zero():
+                            continue
+
+                        # Eliminate duplicates
+                        if id in ids:
+                            continue
+                        ids.add(id)
+
+                        logging.info(f"Found parked vehicle: {id} (#{_i})")
+                        logging.info(f"Parked vehicle details: {position}, {rotation}, {size}")
+
+                        parked_vehicles.append(
+                            Vehicle(
+                                position,
+                                rotation,
+                                size,
+                                0,
+                                0,
+                                0,
+                                [],
+                                id,
+                                False,
+                                is_trailer,
+                            )
+                        )
+
+                    return vehicles + parked_vehicles
+                except Exception as e:
+                    logging.exception(f"Failed to unpack parked vehicle data: {e}")
+                    pass
+            
             return vehicles
         except Exception:
             logging.exception("Failed to read camera properties")
