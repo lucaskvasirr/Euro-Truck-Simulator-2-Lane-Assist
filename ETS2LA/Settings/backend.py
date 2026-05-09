@@ -30,7 +30,7 @@ class GlobalSettings(ETS2LASettings):
 
     # Backend
     use_fancy_traceback: bool = True
-    acceleration_fallback: bool = False
+    acceleration_fallback: bool = True
     display: int = 0
 
     running_plugins: list[str] = []
