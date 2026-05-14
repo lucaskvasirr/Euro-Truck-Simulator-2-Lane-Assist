@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ETS2LA Backend 1.0.0\n"
 "POT-Creation-Date: 2026-02-01 15:00\n"
-"PO-Revision-Date: 2026-02-22 14:03+0000\n"
-"Last-Translator: Hugo <hugo@ets2la.com>\n"
+"PO-Revision-Date: 2026-05-14 06:17+0000\n"
+"Last-Translator: scorpion7slayer <scorpionslayer@ets2la.com>\n"
 "Language-Team: French <http://weblate.ets2la.com/projects/ets2la/backend/fr/>"
 "\n"
 "Language: fr\n"
@@ -364,7 +364,12 @@ msgstr "Salut !"
 
 #: .\Pages\about.py:339
 msgid "I see you've disabled ads. That's totally fine, but you can still support ETS2LA development by donating via Ko-Fi. *Every donation is equal to weeks(!) of ad revenue*, we are eternally grateful for every bit of support we get!"
-msgstr "Je vois que vous avez désactivé les publicités. Ce n'est pas grave, mais vous pouvez toujours soutenir le développement d'ETS2LA en faisant un don via Ko-Fi. *Chaque don équivaut à plusieurs semaines(!) de revenus publicitaires*, nous sommes éternellement reconnaissants pour chaque soutien que nous recevons !"
+msgstr ""
+"Je vois que vous avez désactivé les publicités. Ce n'est pas grave, mais "
+"vous pouvez toujours soutenir le développement d'ETS2LA en faisant un don "
+"via Ko-Fi. Chaque don équivaut à plusieurs semaines(!) de revenus "
+"publicitaires, nous sommes éternellement reconnaissants pour chaque soutien "
+"reçu !"
 
 #: .\Pages\about.py:354
 msgid "Donate via Ko-Fi"
@@ -433,7 +438,6 @@ msgid "Welcome back, {0}!"
 msgstr "Bienvenue à nouveau, {0} !"
 
 #: .\Pages\about.py:499
-#, fuzzy
 msgid "The ETS2LA backend might be partially unavailable, please mind any erroneous values or missing statistics!"
 msgstr ""
 "Le backend de ETS2LA peut être partiellement indisponible, s’il vous plaît, "
@@ -534,12 +538,10 @@ msgid "Closing existing plugin processes"
 msgstr "Fermeture des processus de plugins existants"
 
 #: .\Pages\catalogue.py:214
-#, fuzzy
 msgid "Failed to stop existing plugin processes."
 msgstr "Impossible d'arrêter les processus des plugin existants."
 
 #: .\Pages\catalogue.py:216
-#, fuzzy
 msgid "Updating existing installation"
 msgstr "Mise à jour de l'installation existante"
 
@@ -558,7 +560,6 @@ msgid "Success"
 msgstr "Succès"
 
 #: .\Pages\catalogue.py:257
-#, fuzzy
 msgid "Plugin '{name}' updated successfully."
 msgstr "Le plugin '{name}' a été mis à jour avec succès."
 
@@ -923,11 +924,11 @@ msgstr "Avertissement"
 
 #: .\Pages\global_settings.py:407
 msgid "Prompt"
-msgstr ""
+msgstr "Invite"
 
 #: .\Pages\global_settings.py:409
 msgid "Toggle Sounds"
-msgstr ""
+msgstr "Activer/désactiver les sons"
 
 #: .\Pages\global_settings.py:413
 msgid "Startup Sound"
@@ -991,7 +992,7 @@ msgstr "Divers"
 
 #: .\Pages\global_settings.py:558
 msgid "UI Settings"
-msgstr ""
+msgstr "Réglages UI"
 
 #: .\Pages\global_settings.py:563
 msgid "Frontend Port"
@@ -1035,7 +1036,7 @@ msgstr "Le temps qu’ETS2LA attend avant que la fenêtre ne s’affiche."
 
 #: .\Pages\global_settings.py:609
 msgid "Backend Settings"
-msgstr ""
+msgstr "Paramètres du backend"
 
 #: .\Pages\global_settings.py:611
 msgid "Send Crash Reports"
@@ -1055,7 +1056,7 @@ msgstr "Activez cette option pour utiliser un traceback amélioré en cas d’er
 
 #: .\Pages\global_settings.py:627
 msgid "Seasonal Effects"
-msgstr ""
+msgstr "Effets saisonniers"
 
 #: .\Pages\global_settings.py:634
 msgid "Fireworks"
@@ -1172,7 +1173,7 @@ msgstr "Vous devrez redémarrer ETS2LA après avoir terminé l’onboarding pour
 
 #: .\Pages\onboarding.py:411
 msgid "Map Data"
-msgstr "Données de la map"
+msgstr "Données de la carte"
 
 #: .\Pages\onboarding.py:413
 msgid "ETS2LA uses pre-extracted map data from the game. We handle the data beforehand and you can then just download it as necessary. Please select the data you need for your current game version below."
@@ -1294,19 +1295,22 @@ msgstr "C’est ce bouton vert !"
 
 #: .\Pages\onboarding.py:710
 msgid "Visualization Notice"
-msgstr ""
+msgstr "Notice de visualisation"
 
 #: .\Pages\onboarding.py:712
 msgid "Sometimes the ETS2LA window might not work as expected. If you find any weird issues, then pressing the F5 key will reload the window."
 msgstr ""
+"Parfois, la fenêtre ETS2LA peut ne pas fonctionner comme prévu. Si vous "
+"rencontrez des problèmes étranges, appuyer sur la touche F5 rechargera la "
+"fenêtre."
 
 #: .\Pages\onboarding.py:720
 msgid "Press F5 to Continue"
-msgstr ""
+msgstr "Appuyez sur F5 pour continuer"
 
 #: .\Pages\onboarding.py:726
 msgid "Bypass"
-msgstr ""
+msgstr "Contournement"
 
 #: .\Pages\onboarding.py:742
 msgid ""
@@ -1314,10 +1318,15 @@ msgid ""
 "\n"
 "A key you can use to refresh websites. Since this page is also a website it works just the same here."
 msgstr ""
+"**F5**\n"
+"\n"
+"Une touche que vous pouvez utiliser pour actualiser les sites web. Comme "
+"cette page est également un site web, elle fonctionne exactement de la même "
+"manière ici."
 
 #: .\Pages\onboarding.py:748
 msgid "Example of a broken visualization page."
-msgstr ""
+msgstr "Exemple de page de visualisation défectueuse."
 
 #: .\Pages\onboarding.py:752
 msgid "Onboarding Complete!"
@@ -1428,11 +1437,13 @@ msgstr ""
 #: .\Pages\plugins.py:65 .\Plugins\CollisionAvoidance\main.py:17
 #: .\Plugins\CollisionAvoidance\ui.py:15 .\Plugins\CollisionAvoidance\ui.py:37
 msgid "Collision Avoidance"
-msgstr ""
+msgstr "Évitement des collisions"
 
 #: .\Pages\plugins.py:66
 msgid "Enable collision avoidance features when the truck is under 30km/h and in tight turns / intersections."
 msgstr ""
+"Activer les fonctions d’évitement des collisions lorsque le camion roule à "
+"moins de 30 km/h et lors de virages serrés / aux intersections."
 
 #: .\Pages\plugins.py:72 .\Plugins\HUD\main.py:23 .\Plugins\HUD\ui.py:127
 msgid "HUD"
@@ -1730,7 +1741,7 @@ msgstr "Appels de dessin : {} ({:.0f} %)"
 
 #: .\Plugins\AR\main.py:738
 msgid "Frustum Culled: {} ({:.0f}%)"
-msgstr ""
+msgstr "Objets hors champ : {} ({:.0f}%)"
 
 #: .\Plugins\AR\main.py:748
 msgid "Text Cache Length: {}"
@@ -1834,18 +1845,22 @@ msgstr "À quelle distance l'ACC doit-il se maintenir du véhicule qui le préc�
 #: .\Plugins\AdaptiveCruiseControl\settings.py:186
 msgid "At 80km/h ETS2LA will keep approximately {distance}m ({distance_ft}ft) from the vehicle in front."
 msgstr ""
+"À 80 km/h, ETS2LA maintiendra environ {distance}m ({distance_ft}ft) de "
+"distance avec le véhicule qui précède."
 
 #: .\Plugins\AdaptiveCruiseControl\settings.py:200
 msgid "Obstruction Settings"
-msgstr ""
+msgstr "Paramètres d'obstruction"
 
 #: .\Plugins\AdaptiveCruiseControl\settings.py:203
 msgid "Ignore Gates"
-msgstr ""
+msgstr "Ignorer les barrières"
 
 #: .\Plugins\AdaptiveCruiseControl\settings.py:204
 msgid "Whether the ACC should ignore gates. Please note that this will, as it says ignore the gates."
 msgstr ""
+"L’ACC doit‑il ignorer les barrières. Veuillez noter que cela signifie, comme "
+"indiqué, ignorer les barrières."
 
 #: .\Plugins\AdaptiveCruiseControl\settings.py:213
 msgid "Ignore Traffic Lights"
@@ -1929,11 +1944,13 @@ msgstr "PID"
 
 #: .\Plugins\AdaptiveCruiseControl\settings.py:327
 msgid "Show Debug Data"
-msgstr ""
+msgstr "Afficher les données de débogage"
 
 #: .\Plugins\AdaptiveCruiseControl\settings.py:328
 msgid "Show ACC debug information on the AR overlay, can help when tuning the PID controller."
 msgstr ""
+"Afficher les informations de débogage ACC sur la superposition AR, peut "
+"aider lors du réglage du contrôleur PID."
 
 #: .\Plugins\AdaptiveCruiseControl\settings.py:337
 msgid "Unlock PID"
@@ -1973,19 +1990,21 @@ msgstr "Cette vidéo explique de manière visuelle le fonctionnement d'un régul
 
 #: .\Plugins\CollisionAvoidance\main.py:19
 msgid "Provide collision avoidance when inside intersections."
-msgstr ""
+msgstr "Fournir l'évitement de collision à l'intérieur des intersections."
 
 #: .\Plugins\CollisionAvoidance\main.py:119
 msgid "Collision avoidance disabled"
-msgstr ""
+msgstr "Évitement de collision désactivé"
 
 #: .\Plugins\CollisionAvoidance\main.py:127
 msgid "Collision avoidance enabled"
-msgstr ""
+msgstr "Évitement de collision activé"
 
 #: .\Plugins\CollisionAvoidance\ui.py:38
 msgid "These settings will affect how ETS2LA reacts to traffic around it. Please note that this does not affect lane changes."
 msgstr ""
+"Ces réglages influenceront la façon dont ETS2LA réagit au trafic autour de "
+"lui. Veuillez noter que cela n’affecte pas les changements de voie."
 
 #: .\Plugins\CollisionAvoidance\ui.py:44 .\Plugins\Map\ui.py:179
 #: .\Plugins\Map\ui.py:204
@@ -1994,48 +2013,57 @@ msgstr "[Expérimental]"
 
 #: .\Plugins\CollisionAvoidance\ui.py:51
 msgid "Sensitivity"
-msgstr ""
+msgstr "Sensibilité"
 
 #: .\Plugins\CollisionAvoidance\ui.py:52
 msgid "How close a vehicle has to be to the truck's path to be considered a threat. Higher values make the system more sensitive."
 msgstr ""
+"À quelle distance un véhicule doit se trouver du trajet du camion pour être "
+"considéré comme une menace. Des valeurs plus élevées rendent le système plus "
+"sensible."
 
 #: .\Plugins\CollisionAvoidance\ui.py:67
 msgid "Max Speed"
-msgstr ""
+msgstr "Vitesse max"
 
 #: .\Plugins\CollisionAvoidance\ui.py:68
 msgid "The maximum speed the truck can be going for collision avoidance to be active."
 msgstr ""
+"La vitesse maximale à laquelle le camion peut rouler pour que l'évitement de "
+"collision reste actif."
 
 #: .\Plugins\CollisionAvoidance\ui.py:81
 msgid "Lookahead Time"
-msgstr ""
+msgstr "Temps d'anticipation"
 
 #: .\Plugins\CollisionAvoidance\ui.py:82
 msgid "How far ahead the system looks for potential collisions."
 msgstr ""
+"Jusqu'où le système regarde en avant pour détecter les collisions "
+"potentielles."
 
 #. TRANSLATORS: This means seconds, basically 3s = 3 seconds
 #: .\Plugins\CollisionAvoidance\ui.py:84
 msgid "s"
-msgstr ""
+msgstr "s"
 
 #: .\Plugins\CollisionAvoidance\ui.py:93
 msgid "Announce State"
-msgstr ""
+msgstr "Signaler l’état"
 
 #: .\Plugins\CollisionAvoidance\ui.py:94
 msgid "Announce when collision avoidance is activated or deactivated."
-msgstr ""
+msgstr "Annoncer lorsque l'évitement de collision est activé ou désactivé."
 
 #: .\Plugins\EventListener\main.py:20
 msgid "Event Listener"
-msgstr ""
+msgstr "écouteur d’événements"
 
 #: .\Plugins\EventListener\main.py:22
 msgid "This plugin listens to the events provided by the game SDK and the log files."
 msgstr ""
+"Ce plugin écoute les événements fournis par le SDK du jeu et les fichiers "
+"journaux."
 
 #: .\Plugins\HUD\elements\acc.py:9 .\Plugins\HUD\main.py:320
 #: .\Plugins\HUD\main.py:324
@@ -2177,7 +2205,7 @@ msgstr "Ligne de direction"
 
 #: .\Plugins\HUD\elements\steering.py:10
 msgid "Draw steering line from Map."
-msgstr "Afficher la ligne de direction à partir de la Map."
+msgstr "Afficher la ligne de direction à partir de la carte."
 
 #: .\Plugins\HUD\main.py:25
 msgid "Creates a heads up display on the windshield. Needs the AR plugin to work."
@@ -2309,11 +2337,13 @@ msgstr "Basculer la direction"
 
 #: .\Plugins\Map\controls.py:8
 msgid "When the Map plugin is running, this will toggle the steering on/off."
-msgstr "Lorsque le plugin Map est actif, cette option permet d’activer ou désactiver la direction."
+msgstr ""
+"Lorsque le plugin carte est actif, cette option permet d’activer ou "
+"désactiver la direction."
 
 #: .\Plugins\Map\main.py:54 .\Plugins\Map\ui.py:28
 msgid "Map"
-msgstr "Map"
+msgstr "Carte"
 
 #: .\Plugins\Map\main.py:55
 msgid "This plugin provides steering and navigation features. It is the most important plugin in ETS2LA."
@@ -2321,7 +2351,7 @@ msgstr "Ce plugin offre des fonctions de direction et de navigation. C’est le 
 
 #: .\Plugins\Map\main.py:241
 msgid "Error initializing Map plugin: {0}"
-msgstr "Erreur d’initialisation du plugin Map : {0}"
+msgstr "Erreur d’initialisation du plugin carte : {0}"
 
 #: .\Plugins\Map\main.py:277
 msgid "Preparing to load data..."
@@ -2329,7 +2359,8 @@ msgstr "Préparation du chargement des données..."
 
 #: .\Plugins\Map\main.py:291
 msgid "Waiting for game data selection in the Settings -> Map..."
-msgstr "En attente de la sélection des données du jeu dans Paramètres → Map..."
+msgstr ""
+"En attente de la sélection des données du jeu dans Paramètres → Carte..."
 
 #: .\Plugins\Map\main.py:325
 msgid "Invalid steering value received"
@@ -2337,7 +2368,7 @@ msgstr "Valeur de direction invalide reçue"
 
 #: .\Plugins\Map\main.py:352
 msgid "Error in Map plugin run loop: {0}"
-msgstr "Erreur dans la boucle d’exécution du plugin Map : {0}"
+msgstr "Erreur dans la boucle d’exécution du plugin Carte : {0}"
 
 #: .\Plugins\Map\main.py:413
 msgid "Warning: Steering might be compromised due to low FPS. ({0} fps)"
@@ -2349,11 +2380,14 @@ msgstr "Non trouvé"
 
 #: .\Plugins\Map\ui.py:130
 msgid "Map Settings"
-msgstr "Paramètres de Map"
+msgstr "Paramètres de la Carte"
 
 #: .\Plugins\Map\ui.py:131
 msgid "Configure the settings for the Map plugin. Here you can adjust various options related to navigation, steering, and data handling."
-msgstr "Configurez les paramètres du plugin Map. Ici, vous pouvez ajuster différentes options liées à la navigation, la direction et la gestion des données."
+msgstr ""
+"Configurez les paramètres du plugin Carte. Ici, vous pouvez ajuster "
+"différentes options liées à la navigation, la direction et la gestion des "
+"données."
 
 #: .\Plugins\Map\ui.py:141
 msgid "Disable FPS Notices"
@@ -2361,15 +2395,19 @@ msgstr "Désactiver les alertes FPS"
 
 #: .\Plugins\Map\ui.py:142
 msgid "When enabled map will not notify of any FPS related issues."
-msgstr "Lorsque cette option est activée, Map ne notifiera plus des problèmes ou alertes liés au FPS."
+msgstr ""
+"Lorsque cette option est activée, Carte ne notifiera plus des problèmes ou "
+"alertes liés au FPS."
 
 #: .\Plugins\Map\ui.py:150
 msgid "Takeover When Unreliable"
-msgstr ""
+msgstr "Reprise automatique si hors route"
 
 #: .\Plugins\Map\ui.py:151
 msgid "When enabled, the map will automatically take over control when the truck is not following the route correctly."
 msgstr ""
+"Lorsque activée, la carte reprend automatiquement le contrôle quand le "
+"camion ne suit pas correctement l'itinéraire."
 
 #: .\Plugins\Map\ui.py:183
 msgid "Automatic Tolls"
@@ -2385,7 +2423,7 @@ msgstr "Calculer les données de direction"
 
 #: .\Plugins\Map\ui.py:241
 msgid "When enabled map will compute and send steering data to the game."
-msgstr "Quand activé, Map calcule et envoie les données de direction au jeu."
+msgstr "Quand activé, Carte calcule et envoie les données de direction au jeu."
 
 #: .\Plugins\Map\ui.py:248
 msgid "Drive Based On Trailer"
@@ -2393,7 +2431,9 @@ msgstr "Conduire en fonction de la remorque"
 
 #: .\Plugins\Map\ui.py:249
 msgid "When enabled map will take into account the trailer when calculating the current steering point."
-msgstr "Quand activé, Map prend en compte la remorque pour le calcul du point de braquage actuel."
+msgstr ""
+"Quand activé, Carte prend en compte la remorque pour le calcul du point de "
+"braquage actuel."
 
 #: .\Plugins\Map\ui.py:256
 msgid "Steering Smoothness"
@@ -2417,7 +2457,9 @@ msgstr "Si vous rencontrez une erreur après avoir modifié les données, veuill
 
 #: .\Plugins\Map\ui.py:297
 msgid "Please select the data you want to use. This will begin the download process and Map will be ready once the data is loaded."
-msgstr "Veuillez sélectionner les données que vous souhaitez utiliser. Cela lancera le téléchargement et Map sera prêt une fois les données chargées."
+msgstr ""
+"Veuillez sélectionner les données que vous souhaitez utiliser. Cela lancera "
+"le téléchargement et Carte sera prêt une fois les données chargées."
 
 #: .\Plugins\Map\ui.py:309
 msgid "Update Data"
@@ -2449,7 +2491,9 @@ msgstr "Sockets de navigation"
 
 #: .\Plugins\NavigationSockets\main.py:125
 msgid "This plugin provides a WebSocket server for navigation data on a world map."
-msgstr "Ce plugin fournit un serveur WebSocket pour les données de navigation sur une world map."
+msgstr ""
+"Ce plugin fournit un serveur WebSocket pour les données de navigation sur "
+"une carte du monde."
 
 #: .\Plugins\TTS\main.py:89 .\Plugins\TTS\main.py:199
 msgid "TTS"
@@ -2553,11 +2597,11 @@ msgstr "Chargement de la voix TTS : {0}"
 
 #: .\Plugins\TTS\main.py:376
 msgid "Map steering enabled."
-msgstr "Direction via map activée."
+msgstr "Direction via carte activée."
 
 #: .\Plugins\TTS\main.py:378
 msgid "Map steering disabled."
-msgstr "Direction via map désactivée."
+msgstr "Direction via carte désactivée."
 
 #: .\Plugins\TTS\main.py:392
 msgid "Adaptive Cruise Control enabled."
@@ -2731,7 +2775,7 @@ msgstr "Ce plugin fournit un serveur WebSocket pour la visualisation ETS2LA. Il 
 
 #: .\main.py:147
 msgid "Checking mirrors..."
-msgstr ""
+msgstr "Vérification des miroirs…"
 
 #: .\main.py:161
 msgid "- Reached {0} in {1:.0f}ms"
