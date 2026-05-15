@@ -211,7 +211,10 @@ class Plugin(ETS2LAPlugin):
 
         index = self.tags.next_intersection_lane
         index: int = self.tags.merge(index)
-        if index is None:
+        if index is None or not isinstance(index, int):
+            return
+
+        if index >= len(prefab.nav_routes):
             return
 
         target_route = prefab.nav_routes[index]
